@@ -1,0 +1,59 @@
+html{
+    font-family: ms-serif;
+}
+body {
+    margin: 0px;
+    background-color: silver !important;
+}
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    background-color: navy;
+    height: 42px;
+}
+.nav-button {
+    border-radius: 0px !important;
+    background-color: white;
+    border: none;
+}
+
+article {
+    margin: 20px;
+}
+
+.note {
+    border: black solid 1px;
+    width: 400px;
+    height: 400px;
+}
+
+.note-title {
+    background-color: aqua !important;
+    border: none !important;
+    border-radius: 0px !important;
+}
+
+.note-body {
+    border-radius: 0px !important;
+    background-color: white !important;
+    border-top: solid 1px !important;
+    border-bottom: solid 1px !important;
+    border-left: none !important;
+    border-right: none !important;
+    height: 300px;
+    resize: none !important;
+    color: black;
+}
+
+.submit {
+    background-color: red;
+    border: none;
+    width: 398px;
+    height: 62px;
+    color: white;
+}
+
+.submit:hover {
+    background-color: maroon;
+}
