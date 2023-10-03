@@ -8,7 +8,7 @@
     $sql = "CREATE TABLE note (
         id INT(20) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
         title VARCHAR(24),
-        content VARCHAR(64)
+        body VARCHAR(64)
         )";
 
     if ($conn->query($sql) === TRUE) {

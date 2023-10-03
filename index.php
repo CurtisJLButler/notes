@@ -1,3 +1,13 @@
+<?php
+    // Create connection
+    $conn = new mysqli("localhost:3306", "root", "Admin", "notes");
+
+    // Count the amount of notes
+    $sql = "SELECT * from notes";
+
+    // Return the amount of records
+    $recordcount = mysqli_num_rows($conn, $sql);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,9 +24,25 @@
         <button type="button" class=" nav-button" type="button" onclick="window.location.href='scripts/new.php'">New</button>
     </nav>
     <article>
-    <div id="note1" class="note"></div>
+    <!-- <div id="note1" class="note"></div> -->
+    <div id="note1" class="note">
+        <form action="/notes/scripts/save_note.php" method="post">
+            <div class="row">
+                <div class="col">
+                    <input name="note-title" type="text" class="note-title form-control" placeholder="Title" aria-label="Title">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <textarea name="note-body" class="note-body form-control" placeholder="Note" aria-label="Note"></textarea>
+                </div>
+            </div>
+            
+            <input type="submit" name="Submit" id="Submit" value="Submit" class="submit">
+        </form>
+    </div>
     </article>
 
 </body>
 </html>
-<script type="text/javascript" src="scripts/display_notes.js"></script>
+<!-- <script type="text/javascript" src="scripts/display_notes.js"></script> -->
